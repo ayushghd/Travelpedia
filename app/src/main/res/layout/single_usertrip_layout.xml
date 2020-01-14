@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/trip_card"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    cardview:cardCornerRadius="10dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/colorTintedBackground" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:weightSum="100"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/trip_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="50"
+
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textSize="22dp"
+                android:text="Trip Name"
+                android:textColor="@color/colorPrimary" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@color/colorTintedBackground" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:weightSum="100"
+                >
+            <TextView
+                android:id="@+id/trip_members"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="50"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:text="Trip Members"
+                android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/trip_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="50"
+                    android:textSize="20dp"
+                    android:text="Trip Date"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tripDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:text="Trip Cost"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyTrip.MyTripNewNote">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/new_note_title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:hint="Type your title here..."-->
+            <!--android:padding="10dp" />-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/new_note_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="City Name"
+                android:maxLines="1"
+                android:popupBackground="#ffffff"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/new_note_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="Trip Expenditure in (Rs.)"
+                android:maxLines="1"
+                android:popupBackground="#ffffff"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:alpha=".3"
+            android:background="@android:color/black" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_location"
+                android:layout_weight="0"/>
+            <TextView
+                android:id="@+id/sdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/prompt_start_date"
+                android:textColor="?attr/editTextColor"
+                android:background="?attr/editTextBackground" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <Button
+                android:id="@+id/image1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Choose Image 1"
+                android:layout_weight="33"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                />
+            <Button
+                android:id="@+id/image2"
+                android:layout_weight="33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Choose Image 2"
+                android:background="@drawable/border"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:id="@+id/retrieve"
+                android:layout_weight="33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="See Images"
+                android:background="@drawable/rounded_button"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                />
+
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/new_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Type your experience here..."
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/new_note_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/create_btn"
+            android:text="Save Trip"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

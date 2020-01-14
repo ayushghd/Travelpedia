@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Review.CityReview"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:max="5"
+        />
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Write your review..."
+        android:maxLines="3"
+        />
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:text="Submit"
+        android:background="@drawable/rounded_button"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="What others have reviewed"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_reviews_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

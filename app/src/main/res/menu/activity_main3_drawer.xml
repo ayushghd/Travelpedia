@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search" />
+        <item
+            android:id="@+id/my_trips"
+            android:icon="@drawable/ic_speaker_notes_black_24dp"
+            android:title="My trips" />
+        <item
+            android:id="@+id/upcoming_trips"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:title="Plan a trip" />
+
+        <item
+            android:id="@+id/nav_review"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Reviews" />
+        <item
+            android:id="@+id/my_profile"
+            android:icon="@drawable/edit_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/suggestion"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="Suggest Places" />
+        <item
+            android:id="@+id/hotelBook"
+            android:icon="@drawable/ic_hotel_black_24dp"
+            android:title="Hotels and Tickets Booking" />
+        <item
+            android:id="@+id/emergency"
+            android:icon="@drawable/emergencyexit"
+            android:title="Emergency" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

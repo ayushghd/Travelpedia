@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:gravity="center_horizontal">
+	<RelativeLayout
+		android:id="@+id/rellay1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/custom_toolbar"
+		android:paddingBottom="20dp">
+
+
+
+	<TextView
+		android:id="@+id/tv_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="15sp"
+		android:fontFamily="sans-serif-light"
+		android:text="Priyanshu Singh"
+		android:textColor="@color/white"
+		android:textSize="32sp" />
+	</RelativeLayout>
+
+	<TextView
+        android:id="@+id/tv_vicinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/rellay1"
+        />
+    
+	<ViewFlipper 
+	    android:id="@+id/flipper"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_below="@+id/tv_vicinity">
+	</ViewFlipper>
+	
+	<TextView 
+        android:id="@+id/tv_photos_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/flipper"/>
+     
+</RelativeLayout>

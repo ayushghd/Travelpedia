@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Homepage"
+    tools:showIn="@layout/app_bar_homepage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/rl1"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="@color/colorPrimary"
+                app:pageColor="#fff"
+                app:snap="false" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/border"
+            android:hint="Where to go?"
+            android:id="@+id/search"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/searchbt"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/search"
+            android:layout_toEndOf="@+id/search"
+            android:background="@drawable/buttonplay"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#111111"
+                android:textAlignment="center"
+                android:fontFamily="@font/raleway_black"
+                android:text="POPULAR SPOTS"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_id1"
+                    android:clickable="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    cardview:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/top_palces"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_tourist"
+                            android:background="#2d2d2d"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_weight="80"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/raleway_black"
+                                android:text="TOP PLACES TO VISIT IN CITY"/>
+
+                            <Button
+                                android:id="@+id/searchTopPlace"
+                                android:layout_weight="20"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:background="@drawable/right_arrow_grey" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_id2"
+                    android:clickable="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    cardview:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/top_tourist"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_tourism_country"
+                            android:background="#2d2d2d"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_weight="50"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/raleway_black"
+                                android:text="TOP TOURIST SPOTS IN COUNTRY"/>
+
+                            <Button
+                                android:id="@+id/searchTopTourist"
+                                android:layout_weight="50"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/right_arrow_grey" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_id3"
+                    android:clickable="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    cardview:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/top_monuments"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_monument_country"
+                            android:background="#2d2d2d"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_weight="50"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/raleway_black"
+                                android:text="TOP MONUMENTS IN COUNTRY"/>
+
+                            <Button
+                                android:id="@+id/searchTopMonuments"
+                                android:layout_weight="50"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/right_arrow_grey" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_id4"
+                    android:clickable="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    cardview:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/top_buildings"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_buildings_country"
+                            android:background="#2d2d2d"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_weight="50"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/raleway_black"
+                                android:text="TOP BUILDINGS IN COUNTRY"/>
+
+                            <Button
+                                android:id="@+id/searchTopBuildings"
+                                android:layout_weight="50"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/right_arrow_grey" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll1"
+                android:paddingTop="10dp"
+                android:weightSum="100"
+                >
+
+                <ImageView
+                    android:id="@+id/paris1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/paris"
+                    android:layout_weight="50"
+                    />
+                <ImageView
+                    android:id="@+id/sydney1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sydney"
+                    android:layout_weight="50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="PARIS"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="SYDNEY"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll2"
+                android:paddingTop="10dp"
+                android:weightSum="100"
+                >
+
+                <ImageView
+                    android:id="@+id/newdelhi1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/newdelhi"
+                    android:layout_weight="50"
+                    />
+                <ImageView
+                    android:id="@+id/newyorkcity1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/newyorkcity"
+                    android:layout_weight="50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:text="NEW DELHI"
+                    android:fontFamily="@font/raleway_black"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:text="NEW YORK CITY"
+                    android:fontFamily="@font/raleway_black"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll3"
+                android:paddingTop="10dp"
+                android:weightSum="100"
+                >
+
+                <ImageView
+                    android:id="@+id/prague1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/prague"
+                    android:layout_weight="50"
+                    />
+                <ImageView
+                    android:id="@+id/dubai1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/dubai"
+                    android:layout_weight="50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:text="PRAGUE"
+                    android:fontFamily="@font/raleway_black"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:text="DUBAI"
+                    android:fontFamily="@font/raleway_black"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="100"
+                >
+                <ImageView
+                    android:id="@+id/rome1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rome"
+                    android:layout_weight="50"
+                    />
+                <ImageView
+                    android:id="@+id/london1"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/london"
+                    android:layout_weight="50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="ROME"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:textAlignment="center"
+                    android:text="LONDON"
+                    android:fontFamily="@font/raleway_black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

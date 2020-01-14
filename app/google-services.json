@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "614264636449",
+    "firebase_url": "https://travelpedia-ganador.firebaseio.com",
+    "project_id": "travelpedia-ganador",
+    "storage_bucket": "travelpedia-ganador.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614264636449:android:cd3b6974f06bff80",
+        "android_client_info": {
+          "package_name": "com.ganador.travelpedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614264636449-j48hpoma4oiaq8qlpfuqj78fkuqnetl8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ganador.travelpedia",
+            "certificate_hash": "34a139350e56921e38ed7e1ef592d5493522335d"
+          }
+        },
+        {
+          "client_id": "614264636449-6ucjt58ftlk78d1f2vl2rfn8am73ra58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBetBer1jCeuflwEc_EnbxUnFiWFabxJZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614264636449-6ucjt58ftlk78d1f2vl2rfn8am73ra58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

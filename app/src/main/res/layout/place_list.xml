@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/placelist"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    cardview:cardCornerRadius="10dp"
+    >
+
+
+    <View
+        android:id="@+id/lineView1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorTintedBackground" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/border">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/placeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allahabad"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="2dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@color/colorTintedBackground" />
+            <TextView
+                android:id="@+id/placeDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="No data"
+                android:textColor="@color/darkTheme_colorBackground"
+                android:textSize="18dp" />
+           <RatingBar
+               android:id="@+id/rating_bar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:isIndicator="true"
+               android:focusable="false"
+               android:clickable="false"
+               android:rating="5"
+               />
+
+        </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>
